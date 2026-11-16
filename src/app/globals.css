@@ -23,7 +23,7 @@
 
 /* Display the supplied photograph unchanged, without overlays or cropping. */
 .photo-hero{height:auto;min-height:0;aspect-ratio:2/3;width:100%;max-width:calc(100svh * 2 / 3);margin-inline:auto;background:transparent}
-.photo-hero::after{content:none}
+.photo-hero::after{content:'';background:rgba(0,0,0,.28)}
 .photo-hero .hero-portrait img{object-fit:contain;object-position:center;opacity:1;filter:none}
 .photo-hero .hero-copy{bottom:12%;padding:0 16px}
 .photo-hero h1{font-size:clamp(36px,7svh,76px);line-height:1.1;text-shadow:0 2px 12px #0009}
@@ -128,3 +128,26 @@ footer.compact-footer{padding:32px 24px;overflow:hidden;margin-bottom:0}
   .photo-hero{width:100%;max-width:none;height:100svh;min-height:100svh;aspect-ratio:auto;margin:0}
   .photo-hero .hero-portrait img{object-fit:cover;object-position:50% 40%}
 }
+
+.combined-event-card{max-width:680px;margin:45px auto 0;padding:44px 28px;border:1px solid #b89b6560;background:var(--ivory);text-align:center}
+.combined-event-card .event-rule{margin:32px auto}
+.combined-event-card .event-date{margin-top:16px}
+.combined-time{font-size:13px;color:#59695c;margin-top:8px}
+.shared-venue{margin-top:34px;padding-top:28px;border-top:1px solid #b89b6540}
+.shared-venue .eyebrow{margin-bottom:10px;font-size:9px}
+.shared-venue .text-link{margin-top:14px}
+@media(max-width:700px){.combined-event-card{padding:32px 20px;margin-top:30px}.combined-event-card h3{font-size:32px}}
+.shared-venue .text-link{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.directions-icon{width:18px;height:18px;flex-shrink:0}
+
+/* Calligraphy reserved for the couple's names in the opening portrait. */
+.photo-hero h1{font-family:'Great Vibes','Cormorant Garamond',cursive;font-weight:400;font-size:clamp(52px,8.5svh,94px);line-height:1.18;letter-spacing:0;text-shadow:0 2px 14px #0008}
+.photo-hero .name-line{padding-inline:8px}
+.photo-hero .ampersand.name-line{font-family:var(--serif);font-style:italic;font-size:.48em;line-height:1.25;color:#d7c18a;padding-block:4px}
+@media(max-width:700px){.photo-hero h1{font-size:clamp(52px,15vw,82px)}}
+
+@font-face{font-family:'Playfair Display';src:url('/fonts/PlayfairDisplay-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('/fonts/PlayfairDisplay-Italic.ttf') format('truetype');font-style:italic;font-weight:400;font-display:swap}
+.photo-hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(48px,7svh,78px);font-weight:400;line-height:1.2;letter-spacing:.025em}
+.photo-hero .ampersand.name-line{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:.65em;line-height:1.2}
+@media(max-width:700px){.photo-hero h1{font-size:clamp(42px,12vw,68px)}}

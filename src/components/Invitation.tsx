@@ -8,13 +8,14 @@ import { gallery } from '@/config/gallery';
 
 function Reveal({ children, className = '', delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const reduced = useReducedMotion();
+  const isGallery = className.split(' ').includes('gallery-item');
   return <div className={`scroll-reveal ${className}`}>
     {Children.map(children, (child, index) => <motion.div
       className="reveal-part"
-      initial={reduced ? false : { opacity: 0, y: 48, scale: .97 }}
+      initial={reduced ? false : { opacity: 0, y: isGallery ? 24 : 48, scale: isGallery ? 1 : .97 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: false, amount: .12, margin: '0px 0px -48px 0px' }}
-      transition={{ duration: reduced ? 0 : 1.05, delay: reduced ? 0 : delay + Math.min(index, 3) * .08, ease: [.16, 1, .3, 1] }}
+      viewport={{ once: isGallery, amount: isGallery ? .04 : .12, margin: isGallery ? '0px 0px 40px 0px' : '0px 0px -48px 0px' }}
+      transition={{ duration: reduced ? 0 : isGallery ? 1.2 : 1.05, delay: reduced ? 0 : delay + Math.min(index, 3) * .08, ease: [.22, 1, .36, 1] }}
     >{child}</motion.div>)}
   </div>;
 }
@@ -46,7 +47,7 @@ export function Invitation() {
 
   return <MotionConfig reducedMotion="user"><a href="#celebration" className="skip-link">Skip to wedding details</a><main>
     <section className="hero photo-hero" aria-labelledby="couple-names">
-      <div className="hero-portrait"><Image src={wedding.heroPhoto} alt="Aiswarya and Amal Raj together in the garden" fill preload sizes="100vw" /></div>
+      <div className="hero-portrait"><Image src={wedding.heroPhoto} alt="Aiswarya and Amal together in the garden" fill preload sizes="100vw" /></div>
       <div className="hero-copy">
         <h1 id="couple-names">
           <motion.span className="name-line" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .9, delay: .15 }}>{wedding.bride}</motion.span>
@@ -55,10 +56,12 @@ export function Invitation() {
         </h1>
       </div>
     </section>
-    <section id="celebration" className="celebration section animated-section"><MovingBotanicals /><Reveal><h2>The Wedding<br/><em>Celebration</em></h2><p className="section-intro">Join us in the warmth of family, tradition, and love.</p><div className="events">
-      <article><p className="eyebrow">The sacred beginning</p><h3>Wedding Ceremony</h3><p className="event-date">{wedding.ceremony.date}</p><div className="event-rule"/><dl><div><dt>Muhurtham</dt><dd>{wedding.ceremony.time}</dd></div><div><dt>Venue</dt><dd>{wedding.ceremony.venue}</dd></div></dl>{wedding.ceremony.mapsUrl && <a className="text-link" href={wedding.ceremony.mapsUrl} target="_blank" rel="noopener noreferrer">Get Directions ↗</a>}</article>
-      <article className="reception-card"><p className="eyebrow">An evening of togetherness</p><h3>Wedding-eve Reception</h3><p className="event-date">{wedding.reception.date}</p><div className="event-rule"/><dl><div><dt>Reception & wedding feast</dt><dd>{wedding.reception.time}</dd></div><div><dt>Venue</dt><dd>{wedding.reception.venue}</dd></div></dl>{wedding.reception.mapsUrl && <a className="text-link" href={wedding.reception.mapsUrl} target="_blank" rel="noopener noreferrer">Get Directions ↗</a>}</article>
-    </div></Reveal></section>
+    <section id="celebration" className="celebration section animated-section"><MovingBotanicals /><Reveal><h2>The Wedding<br/><em>Celebration</em></h2><p className="section-intro">Join us in the warmth of family, tradition, and love.</p><article className="combined-event-card">
+      <div className="combined-event"><h3>Wedding Ceremony</h3><p className="event-date">{wedding.ceremony.date}</p><p className="combined-time">Muhurtham · {wedding.ceremony.time}</p></div>
+      <div className="event-rule" />
+      <div className="combined-event"><h3>Wedding Eve</h3><p className="event-date">{wedding.reception.date}</p><p className="combined-time">{wedding.reception.time}</p></div>
+      <div className="shared-venue"><p className="eyebrow">Venue for both celebrations</p><p>{wedding.ceremony.venue}</p>{wedding.ceremony.mapsUrl && <a className="text-link" href={wedding.ceremony.mapsUrl} target="_blank" rel="noopener noreferrer"><svg className="directions-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Get Directions</span></a>}</div>
+    </article></Reveal></section>
     <section id="invitation" className="invitation section animated-section"><MovingBotanicals /><Reveal><Botanical/><p className="eyebrow">Our invitation</p><h2>Your presence.<br/><em>Our greatest joy.</em></h2><p className="body-copy">{wedding.invitation}</p><p className="signature">With love, our families</p></Reveal></section>
     <section id="gallery" className="gallery-section section" aria-labelledby="gallery-heading">
       <Reveal><h2 id="gallery-heading">Our <em>Gallery</em></h2></Reveal>

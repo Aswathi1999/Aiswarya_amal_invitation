@@ -2,7 +2,7 @@ export const gallery = [
   {
     "src": "/images/gallery/Image_284AF96D-8E0C-4E81-8ABB-7325F64E71D9.webp",
     "original": "/images/Image_284AF96D-8E0C-4E81-8ABB-7325F64E71D9.jpeg",
-    "alt": "Aiswarya and Amal Raj together in the garden",
+    "alt": "Aiswarya and Amal together in the garden",
     "width": 1000,
     "height": 1500
   },
@@ -16,7 +16,7 @@ export const gallery = [
   {
     "src": "/images/gallery/Image_5ED19FAE-5981-418D-97F7-B839464E8BA0.webp",
     "original": "/images/Image_5ED19FAE-5981-418D-97F7-B839464E8BA0.jpeg",
-    "alt": "Aiswarya twirling with Amal Raj in the garden",
+    "alt": "Aiswarya twirling with Amal in the garden",
     "width": 1000,
     "height": 1500
   },
@@ -30,14 +30,14 @@ export const gallery = [
   {
     "src": "/images/gallery/Image_69022ACF-4B1B-4975-84A7-336A707F7FC7.webp",
     "original": "/images/Image_69022ACF-4B1B-4975-84A7-336A707F7FC7.jpeg",
-    "alt": "Aiswarya and Amal Raj looking into each other’s eyes",
+    "alt": "Aiswarya and Amal looking into each other’s eyes",
     "width": 1000,
     "height": 1500
   },
   {
     "src": "/images/gallery/Image_ED4FB8EF-F9BD-4E96-A253-70AC2269C682.webp",
     "original": "/images/Image_ED4FB8EF-F9BD-4E96-A253-70AC2269C682.jpeg",
-    "alt": "Aiswarya and Amal Raj resting their foreheads together",
+    "alt": "Aiswarya and Amal resting their foreheads together",
     "width": 1000,
     "height": 1500
   },
@@ -49,24 +49,10 @@ export const gallery = [
     "height": 1500
   },
   {
-    "src": "/images/gallery/Image_04DC472C-C6BD-4EDB-99AE-DA4B5F0F80BD.webp",
-    "original": "/images/Image_04DC472C-C6BD-4EDB-99AE-DA4B5F0F80BD.jpeg",
-    "alt": "Aiswarya and Amal Raj laughing together beneath the garden leaves",
-    "width": 1000,
-    "height": 1500
-  },
-  {
     "src": "/images/gallery/Image_AA8A70C4-6276-4D93-906F-B044CF842B6F.webp",
     "original": "/images/Image_AA8A70C4-6276-4D93-906F-B044CF842B6F.jpeg",
-    "alt": "Aiswarya and Amal Raj holding hands on the steps",
+    "alt": "Aiswarya and Amal holding hands on the steps",
     "width": 1000,
     "height": 1500
   },
-  {
-    "src": "/images/gallery/Image_A2EBCE95-40B6-4266-9908-8BAF01E4DBD0.webp",
-    "original": "/images/Image_A2EBCE95-40B6-4266-9908-8BAF01E4DBD0.jpeg",
-    "alt": "Aiswarya and Amal Raj together on a staircase surrounded by greenery",
-    "width": 1000,
-    "height": 1500
-  }
 ];

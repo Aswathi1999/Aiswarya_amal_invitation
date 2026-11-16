@@ -1,7 +1,7 @@
 export const wedding = {
   introductionPhoto: '/images/Image_E2A9A4BF-4E4F-45F4-A97F-CC59C74C9F79.jpeg',
-  heroPhoto: '/images/Image_284AF96D-8E0C-4E81-8ABB-7325F64E71D9.jpeg',
-  names: 'Aiswarya & Amal Raj', bride: 'Aiswarya', groom: 'Amal Raj',
+  heroPhoto: '/images/hero-optimized.webp',
+  names: 'Aiswarya & Amal', bride: 'Aiswarya', groom: 'Amal',
   brideMalayalam: 'ഐശ്വര്യ', groomMalayalam: 'അമൽരാജ്',
   timezone: 'Asia/Kolkata', start: '2027-01-09T11:30:00+05:30', end: '2027-01-09T12:30:00+05:30',
   dateLabel: '09 January 2027', malayalamDate: '1202 ധനു 25',

@@ -1,4 +1,4 @@
-﻿# Aiswarya & Amal Raj
+# Aiswarya & Amal
 
 Premium Kerala wedding invitation built with Next.js, React, TypeScript, Tailwind CSS and Framer Motion.
 
