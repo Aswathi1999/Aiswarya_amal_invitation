@@ -65,6 +65,6 @@ export function Invitation() {
       <div className="photo-gallery">{gallery.map((photo, index) => <Reveal key={photo.src} className="gallery-item" delay={(index % 3) * .09}><a href={photo.original} target="_blank" rel="noopener noreferrer" aria-label={`View full photo: ${photo.alt} (opens in a new tab)`}><Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="(max-width: 700px) 45vw, 28vw" loading="lazy" /></a></Reveal>)}</div>
     </section>
     <section id="countdown" className="countdown-section countdown-cards section animated-section" aria-labelledby="countdown-heading"><MovingBotanicals /><Reveal><h2 id="countdown-heading">Counting down <em>to forever.</em></h2><div className="countdown-ornament" aria-hidden="true"><span />✧<span /></div><Countdown /><p className="countdown-date-label">{wedding.dateLabel}<span>11:30 AM IST</span></p></Reveal></section>
-    <footer className="closing compact-footer"><Reveal><p className="closing-names">{wedding.names}</p><p className="closing-message">With love, we look forward to celebrating with you.</p></Reveal></footer>
+    <footer className="closing compact-footer"><p className="closing-names">{wedding.names}</p><p className="closing-message">With love, we look forward to celebrating with you.</p></footer>
   </main></MotionConfig>;
 }

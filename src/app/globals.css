@@ -91,7 +91,7 @@ footer.closing{display:block;text-align:center}
 .countdown-cards{position:relative;isolation:isolate}
 
 
-footer.compact-footer{padding:32px 24px}
+footer.compact-footer{padding:32px 24px;overflow:hidden;margin-bottom:0}
 .compact-footer .closing-names{font-size:28px;margin:0 0 10px}
 .compact-footer .closing-message{font-size:11px;margin:0 auto;max-width:360px;line-height:1.7}
 
@@ -122,3 +122,9 @@ footer.compact-footer{padding:32px 24px}
 @media(max-width:700px){.moving-botanicals .floating-branch{width:95px;opacity:.15}.moving-botanicals .branch-left{left:-42px}.moving-botanicals .branch-right{right:-42px}}
 @media(prefers-reduced-motion:reduce){.floating-branch{animation:none!important}.motion-toggle{display:none}.event-rule{animation:none}}
 .reveal-part:focus-within{opacity:1!important;transform:none!important}
+
+/* Keep the opening photograph at a full mobile viewport height. */
+@media(max-width:700px){
+  .photo-hero{width:100%;max-width:none;height:100svh;min-height:100svh;aspect-ratio:auto;margin:0}
+  .photo-hero .hero-portrait img{object-fit:cover;object-position:50% 40%}
+}
