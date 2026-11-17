@@ -9,5 +9,5 @@ export const wedding = {
   reception: { start: '2027-01-08T16:00:00+05:30', date: 'Friday, 08 January 2027', time: 'From 4:00 PM', venue: 'Bride’s Residence', mapsUrl: 'https://maps.google.com/?q=11.422501,75.701385' },
   invitation: 'With the blessings of our families and the grace of the Almighty, we begin a beautiful new chapter together. Your presence and blessings will make our celebration truly special.',
   originalInvitation: '/images/Image_4878B88D-2727-4AB8-8352-0E24E1AE950D.jpeg',
-  siteUrl: 'https://aiswarya-amal-raj-wedding.athulgopal.chatgpt.site',
+  siteUrl: 'https://aiswarya-amal-invitation.vercel.app',
 };
